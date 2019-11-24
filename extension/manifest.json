@@ -1,0 +1,24 @@
+{
+	"name":"Notifiny",
+	"version":"1.0",
+	"manifest_version":2,
+	"description":"Analyse user's activities on websites and compare its behavior",
+	"permissions": [
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"webRequest",
+		"storage",
+		"unlimitedStorage",
+		"history",
+		"identity",
+		"identity.email"
+	],
+	"content_scripts":[
+		{
+			"matches": ["<all_urls>"],
+			"js":["content.js"]
+		}
+	],
+	"icons": { "128": "icon128.png" }
+}
